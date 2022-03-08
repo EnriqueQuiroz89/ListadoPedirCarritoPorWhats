@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Info negocio</title>
+    <link rel="stylesheet" href="index.css">
+
+    <!--FIRESTORE-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+</head>
+
+<body>
+
+    <div class="link-pagina">
+        <a href="store.html">Visita tu tienda</a>
+    </div>
+    <div class="link-pagina">
+        <a href="index.html">Visita tu panel</a>
+    </div>
+
+    <div>
+        <form id="form-negocio" class="form" autocomplete="off">
+
+            <div class="form-control">
+                <input type="text" id="negocio" placeholder="Nombre de tu negocio">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <input type="text" id="variedad" placeholder="¿Que vendes?">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <input type="text" id="rango-precios" placeholder="Rango de Precios">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="form-control">
+                <input type="text" id="horario" placeholder="Horario">
+                <i class="fas fa-check-circle"></i>
+                <i class="fas fa-exclamation-circle"></i>
+                <small>Error message</small>
+            </div>
+
+            <div class="imagen-form-control">
+
+                <input type="text" id="imagen" placeholder="URL Imagen" style="display:initial">
+
+                <!--Campo oculto tipo FILE para elegir la imagen-->
+                <!--MULTIPLE  <input type="file" id="fileElem" multiple accept="image/*" style="display:none"
+                onchange="handleFiles(this.files)">  -->
+
+                <!--SINGULAR  <input type="file" id="fileElem" accept="image/*" style="display:none"
+                         onchange="handleFiles(this.files)"> -->
+
+                <input type="file" id="fileElem" accept="image/*" style="display:none"
+                    onchange="manejarFiles(this.files)">
+
+                <!--Link para detonar la el cuadro de seleccion del input tipo file-->
+                <a href="#" id="fileSelect" class="file-select">Elige una imagen</a>
+                <!--Aqui se muestra el Progreso de la carga-->
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress" id="progress">
+                        <div id="porcentaje">0%</div>
+                    </div>
+                </div>
+
+                <!--Aqui se mostrara un icono de la imagen subida-->
+                <div id="gallery" class="gallery"></div>
+            </div>
+
+            <button class="btn btn-info my-5" id="guardar-edicion" style="display:none">Guardar Edicion</button>
+          
+            <div class="button-control">
+                <button id="boton" class="enviar">Guardar</button>
+            </div>
+        </form>
+
+        <h2>Datos Actuales</h2>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th scope="row">Articulo</th>
+                    <th scope="row">Descripcion</th>
+                    <th scope="row">Precio</th>
+                    <th scope="row">ALgomas</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+                <!--Aqui va insertado el codgio generado desde JS-->
+            </tbody>
+        </table>
+
+
+
+
+    </div>
+
+
+    <script src="info-negocio.js"></script>
+</body>
+
+</html>

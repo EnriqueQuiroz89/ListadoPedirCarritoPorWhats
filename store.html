@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentacion Tienda</title>
+    <link rel="stylesheet" href="store.css">
+    <link rel="stylesheet" href="storeV1.css">
+
+    <!--FIRESTORE-->
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+</head>
+
+<body>
+    <div class="link-pagina">
+        <a href="index.html">Visita tu panel</a>
+    </div>
+    <div class="link-pagina">
+        <a href="info-negocio.html">Info del Negocio</a>
+    </div>
+
+    <!--Nombre del Negocio-->
+    <div class="identidad-negocio" id="identidad-negocio">
+        <div class="uno" id="imagen-negocio">
+        </div>
+        <div class="dos" id="datos-negocio"></div>
+    </div>
+
+    <h2>Mi Catalogo</h2>
+    <div class="container-articulos" id="container-articulos">
+        <div class="articulo">
+            <!--    // Plantilla para diseño 
+            <div class="imagen-articulo"><img
+                    src="https://http2.mlstatic.com/D_NQ_NP_608240-CBT44568441485_012021-O.webp" alt="" id="imagen"
+                    class="imagen">
+            </div>
+            <div class="nombre-articulo" id="articulo"> Hola Nombre Hola Nombre Hola Nombre Hola Nombre Hola Nombre Hola
+                Nombre </div>
+            <div class="descripcion-articulo" id="descripcion">Descripcion</div>
+            <div class="precio-articulo" id="precio">Precio</div>
+
+            <div class="area-whats"> <button id="btn-whats" class="btn-whats"> Pidelo por Whats </button> </div>
+
+           -->
+        </div>
+    </div>
+
+    
+    <h2>Mi Carrito</h2>
+    <div class="carrito" id="carrito">
+    </div>
+
+    <h2>Pedir por Whats</h2>
+    <div class="ordenar" id="ordenar">
+    </div>
+
+
+    <h2>Listado de Articulos</h2>
+    <div class="articulos" id="articulos">
+    </div>
+
+   
+
+    <script src="store.js"></script>
+    
+    <script src="storeV1.js"></script>
+</body>
+
+</html>
